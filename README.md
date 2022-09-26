@@ -82,4 +82,176 @@ These sample job scripts have some reference values and tips for managing OpenMP
 environment variables that are relevant to HW3 and Cori@NERSC.
 
 
-#eof
+# Results
+
+## Basic
+
+```bash
+snaik@nid02391:~/CSC_746/CSC746_Vector_Matrix_Multiplication/build> chmod +x ./job-basic
+snaik@nid02391:~/CSC_746/CSC746_Vector_Matrix_Multiplication/build> ./job-basic
+Description:	Basic implementation of matrix-vector multiply.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00450678 
+Working on problem size N=2048 
+ Elapsed time is : 0.018008524 
+Working on problem size N=4096 
+ Elapsed time is : 0.071882576 
+Working on problem size N=8192 
+ Elapsed time is : 0.28734153 
+Working on problem size N=16384 
+ Elapsed time is : 1.1541844 
+Description:	Basic implementation of matrix-vector multiply.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00449734 
+Working on problem size N=2048 
+ Elapsed time is : 0.017965604 
+Working on problem size N=4096 
+ Elapsed time is : 0.071887466 
+Working on problem size N=8192 
+ Elapsed time is : 0.28749719 
+Working on problem size N=16384 
+ Elapsed time is : 1.1540181 
+Description:	Basic implementation of matrix-vector multiply.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00450837 
+Working on problem size N=2048 
+ Elapsed time is : 0.018039394 
+Working on problem size N=4096 
+ Elapsed time is : 0.072002706 
+Working on problem size N=8192 
+ Elapsed time is : 0.28753452 
+Working on problem size N=16384 
+ Elapsed time is : 1.1544154 
+```
+
+## OpenMP Parallel For in Inner Loop
+
+```bash
+snaik@nid02391:~/CSC_746/CSC746_Vector_Matrix_Multiplication/build> ./job-openmp 
+Description:	OpenMP dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00710305 
+Working on problem size N=2048 
+ Elapsed time is : 0.023301589 
+Working on problem size N=4096 
+ Elapsed time is : 0.083488145 
+Working on problem size N=8192 
+ Elapsed time is : 0.31128662 
+Working on problem size N=16384 
+ Elapsed time is : 1.2069041 
+Description:	OpenMP dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00718356 
+Working on problem size N=2048 
+ Elapsed time is : 0.018307533 
+Working on problem size N=4096 
+ Elapsed time is : 0.054725612 
+Working on problem size N=8192 
+ Elapsed time is : 0.18841288 
+Working on problem size N=16384 
+ Elapsed time is : 0.65553428 
+Description:	OpenMP dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00723779 
+Working on problem size N=2048 
+ Elapsed time is : 0.015278916 
+Working on problem size N=4096 
+ Elapsed time is : 0.039629925 
+Working on problem size N=8192 
+ Elapsed time is : 0.1162557 
+Working on problem size N=16384 
+ Elapsed time is : 0.36770469 
+```
+
+## OpenMP Parallel For in Both Loops
+
+```bash
+snaik@nid02391:~/CSC_746/CSC746_Vector_Matrix_Multiplication/build> ./job-openmp 
+Description:	OpenMP dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00842517 
+Working on problem size N=2048 
+ Elapsed time is : 0.029700134 
+Working on problem size N=4096 
+ Elapsed time is : 0.088982221 
+Working on problem size N=8192 
+ Elapsed time is : 0.32214719 
+Working on problem size N=16384 
+ Elapsed time is : 1.2353732 
+
+Description:	OpenMP dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00496619 
+Working on problem size N=2048 
+ Elapsed time is : 0.013495818 
+Working on problem size N=4096 
+ Elapsed time is : 0.04531799 
+Working on problem size N=8192 
+ Elapsed time is : 0.16263744 
+Working on problem size N=16384 
+ Elapsed time is : 0.61625256 
+
+Description:	OpenMP dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.0038625 
+Working on problem size N=2048 
+ Elapsed time is : 0.006847094 
+Working on problem size N=4096 
+ Elapsed time is : 0.02291375 
+Working on problem size N=8192 
+ Elapsed time is : 0.081596707 
+Working on problem size N=16384 
+ Elapsed time is : 0.30744932 
+```
+
+
+## CBLAS
+
+```bash
+snaik@nid02391:~/CSC_746/CSC746_Vector_Matrix_Multiplication/build> ./job-blas
+Description:	Reference dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.0644224 
+Working on problem size N=2048 
+ Elapsed time is : 0.003327037 
+Working on problem size N=4096 
+ Elapsed time is : 0.013381408 
+Working on problem size N=8192 
+ Elapsed time is : 0.054469422 
+Working on problem size N=16384 
+ Elapsed time is : 0.21716591 
+Description:	Reference dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00511087 
+Working on problem size N=2048 
+ Elapsed time is : 0.003319397 
+Working on problem size N=4096 
+ Elapsed time is : 0.013312508 
+Working on problem size N=8192 
+ Elapsed time is : 0.054558742 
+Working on problem size N=16384 
+ Elapsed time is : 0.21725939 
+Description:	Reference dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00525184 
+Working on problem size N=2048 
+ Elapsed time is : 0.003295108 
+Working on problem size N=4096 
+ Elapsed time is : 0.013411328 
+Working on problem size N=8192 
+ Elapsed time is : 0.054892711 
+Working on problem size N=16384 
+ Elapsed time is : 0.21989115 
+```
