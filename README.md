@@ -101,116 +101,222 @@ Working on problem size N=8192
  Elapsed time is : 0.28734153 
 Working on problem size N=16384 
  Elapsed time is : 1.1541844 
-Description:	Basic implementation of matrix-vector multiply.
-
-Working on problem size N=1024 
- Elapsed time is : 0.00449734 
-Working on problem size N=2048 
- Elapsed time is : 0.017965604 
-Working on problem size N=4096 
- Elapsed time is : 0.071887466 
-Working on problem size N=8192 
- Elapsed time is : 0.28749719 
-Working on problem size N=16384 
- Elapsed time is : 1.1540181 
-Description:	Basic implementation of matrix-vector multiply.
-
-Working on problem size N=1024 
- Elapsed time is : 0.00450837 
-Working on problem size N=2048 
- Elapsed time is : 0.018039394 
-Working on problem size N=4096 
- Elapsed time is : 0.072002706 
-Working on problem size N=8192 
- Elapsed time is : 0.28753452 
-Working on problem size N=16384 
- Elapsed time is : 1.1544154 
 ```
 
-## OpenMP Parallel For in Inner Loop
-
+## OpenMP Parallel For with Static
 ```bash
 snaik@nid02391:~/CSC_746/CSC746_Vector_Matrix_Multiplication/build> ./job-openmp 
+Current Number of Threads = 1
 Description:	OpenMP dgemv.
 
 Working on problem size N=1024 
- Elapsed time is : 0.00710305 
+ Elapsed time is : 0.00850709 
 Working on problem size N=2048 
- Elapsed time is : 0.023301589 
+ Elapsed time is : 0.02596457 
 Working on problem size N=4096 
- Elapsed time is : 0.083488145 
+ Elapsed time is : 0.088949067 
 Working on problem size N=8192 
- Elapsed time is : 0.31128662 
+ Elapsed time is : 0.32174455 
 Working on problem size N=16384 
- Elapsed time is : 1.2069041 
+ Elapsed time is : 1.2211346 
+
+
+Current Number of Threads = 2
 Description:	OpenMP dgemv.
 
 Working on problem size N=1024 
- Elapsed time is : 0.00718356 
+ Elapsed time is : 0.00495418 
 Working on problem size N=2048 
- Elapsed time is : 0.018307533 
+ Elapsed time is : 0.013512525 
 Working on problem size N=4096 
- Elapsed time is : 0.054725612 
+ Elapsed time is : 0.045650797 
 Working on problem size N=8192 
- Elapsed time is : 0.18841288 
+ Elapsed time is : 0.16256014 
 Working on problem size N=16384 
- Elapsed time is : 0.65553428 
+ Elapsed time is : 0.61422221 
+
+
+Current Number of Threads = 4
 Description:	OpenMP dgemv.
 
 Working on problem size N=1024 
- Elapsed time is : 0.00723779 
+ Elapsed time is : 0.00384097 
 Working on problem size N=2048 
- Elapsed time is : 0.015278916 
+ Elapsed time is : 0.006868352 
 Working on problem size N=4096 
- Elapsed time is : 0.039629925 
+ Elapsed time is : 0.022803064 
 Working on problem size N=8192 
- Elapsed time is : 0.1162557 
+ Elapsed time is : 0.082027115 
 Working on problem size N=16384 
- Elapsed time is : 0.36770469 
+ Elapsed time is : 0.30760667 
+
+
+Current Number of Threads = 8
+Description:	OpenMP dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00366152 
+Working on problem size N=2048 
+ Elapsed time is : 0.003571915 
+Working on problem size N=4096 
+ Elapsed time is : 0.011551877 
+Working on problem size N=8192 
+ Elapsed time is : 0.040978122 
+Working on problem size N=16384 
+ Elapsed time is : 0.15396409 
+
+
+Current Number of Threads = 16
+Description:	OpenMP dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00500869 
+Working on problem size N=2048 
+ Elapsed time is : 0.001866028 
+Working on problem size N=4096 
+ Elapsed time is : 0.005919683 
+Working on problem size N=8192 
+ Elapsed time is : 0.020720626 
+Working on problem size N=16384 
+ Elapsed time is : 0.077360611 
+
+
+Current Number of Threads = 32
+Description:	OpenMP dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00891946 
+Working on problem size N=2048 
+ Elapsed time is : 0.004400975 
+Working on problem size N=4096 
+ Elapsed time is : 0.003168057 
+Working on problem size N=8192 
+ Elapsed time is : 0.010668288 
+Working on problem size N=16384 
+ Elapsed time is : 0.039814734 
+
+
+Current Number of Threads = 64
+Description:	OpenMP dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.0160421 
+Working on problem size N=2048 
+ Elapsed time is : 0.005701633 
+Working on problem size N=4096 
+ Elapsed time is : 0.011540827 
+Working on problem size N=8192 
+ Elapsed time is : 0.021452706 
+Working on problem size N=16384 
+ Elapsed time is : 0.020396036
 ```
 
-## OpenMP Parallel For in Both Loops
+## OpenMP Parallel For with Dynamic
 
 ```bash
-snaik@nid02391:~/CSC_746/CSC746_Vector_Matrix_Multiplication/build> ./job-openmp 
+Current Number of Threads = 1
 Description:	OpenMP dgemv.
 
 Working on problem size N=1024 
- Elapsed time is : 0.00842517 
+ Elapsed time is : 0.00840492 
 Working on problem size N=2048 
- Elapsed time is : 0.029700134 
+ Elapsed time is : 0.02622124 
 Working on problem size N=4096 
- Elapsed time is : 0.088982221 
+ Elapsed time is : 0.088689517 
 Working on problem size N=8192 
- Elapsed time is : 0.32214719 
+ Elapsed time is : 0.32142011 
 Working on problem size N=16384 
- Elapsed time is : 1.2353732 
+ Elapsed time is : 1.2196458 
 
+
+Current Number of Threads = 2
 Description:	OpenMP dgemv.
 
 Working on problem size N=1024 
- Elapsed time is : 0.00496619 
+ Elapsed time is : 0.00495439 
 Working on problem size N=2048 
- Elapsed time is : 0.013495818 
+ Elapsed time is : 0.013624934 
 Working on problem size N=4096 
- Elapsed time is : 0.04531799 
+ Elapsed time is : 0.045297698 
 Working on problem size N=8192 
- Elapsed time is : 0.16263744 
+ Elapsed time is : 0.16257208 
 Working on problem size N=16384 
- Elapsed time is : 0.61625256 
+ Elapsed time is : 0.61363755 
 
+
+Current Number of Threads = 4
 Description:	OpenMP dgemv.
 
 Working on problem size N=1024 
- Elapsed time is : 0.0038625 
+ Elapsed time is : 0.00380979 
 Working on problem size N=2048 
- Elapsed time is : 0.006847094 
+ Elapsed time is : 0.006883402 
 Working on problem size N=4096 
- Elapsed time is : 0.02291375 
+ Elapsed time is : 0.022882443 
 Working on problem size N=8192 
- Elapsed time is : 0.081596707 
+ Elapsed time is : 0.081507246 
 Working on problem size N=16384 
- Elapsed time is : 0.30744932 
+ Elapsed time is : 0.3082689 
+
+
+Current Number of Threads = 8
+Description:	OpenMP dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00366184 
+Working on problem size N=2048 
+ Elapsed time is : 0.003529096 
+Working on problem size N=4096 
+ Elapsed time is : 0.011574187 
+Working on problem size N=8192 
+ Elapsed time is : 0.040953913 
+Working on problem size N=16384 
+ Elapsed time is : 0.15419928 
+
+
+Current Number of Threads = 16
+Description:	OpenMP dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00490546 
+Working on problem size N=2048 
+ Elapsed time is : 0.001892977 
+Working on problem size N=4096 
+ Elapsed time is : 0.005943994 
+Working on problem size N=8192 
+ Elapsed time is : 0.020665056 
+Working on problem size N=16384 
+ Elapsed time is : 0.07765838 
+
+
+Current Number of Threads = 32
+Description:	OpenMP dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.00815563 
+Working on problem size N=2048 
+ Elapsed time is : 0.004548525 
+Working on problem size N=4096 
+ Elapsed time is : 0.003332076 
+Working on problem size N=8192 
+ Elapsed time is : 0.010676178 
+Working on problem size N=16384 
+ Elapsed time is : 0.039773894 
+
+
+Current Number of Threads = 64
+Description:	OpenMP dgemv.
+
+Working on problem size N=1024 
+ Elapsed time is : 0.0155547 
+Working on problem size N=2048 
+ Elapsed time is : 0.005866544 
+Working on problem size N=4096 
+ Elapsed time is : 0.011806366 
+Working on problem size N=8192 
+ Elapsed time is : 0.022682514 
+Working on problem size N=16384 
+ Elapsed time is : 0.020273007 
 ```
 
 
