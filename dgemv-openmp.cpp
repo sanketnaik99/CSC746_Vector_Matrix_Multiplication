@@ -35,7 +35,7 @@ void my_dgemv(int n, double* A, double* x, double* y) {
 
    // Enable OpenMP parallelization over rows
    #pragma omp parallel for
-   for (int i = 0; i < n; i++)
+   for (int i = 0; i < n; i++){
       // Enable OpenMP parallelization with reduction for y[i]
       #pragma omp parallel for reduction (+:y[i])
       for (int j = 0; j < n; j++){
