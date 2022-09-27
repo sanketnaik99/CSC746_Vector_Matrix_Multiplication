@@ -87,8 +87,6 @@ environment variables that are relevant to HW3 and Cori@NERSC.
 ## Basic
 
 ```bash
-snaik@nid02391:~/CSC_746/CSC746_Vector_Matrix_Multiplication/build> chmod +x ./job-basic
-snaik@nid02391:~/CSC_746/CSC746_Vector_Matrix_Multiplication/build> ./job-basic
 Description:	Basic implementation of matrix-vector multiply.
 
 Working on problem size N=1024 
@@ -105,7 +103,6 @@ Working on problem size N=16384
 
 ## OpenMP Parallel For with Static
 ```bash
-snaik@nid02391:~/CSC_746/CSC746_Vector_Matrix_Multiplication/build> ./job-openmp 
 Current Number of Threads = 1
 Description:	OpenMP dgemv.
 
@@ -323,7 +320,6 @@ Working on problem size N=16384
 ## CBLAS
 
 ```bash
-snaik@nid02391:~/CSC_746/CSC746_Vector_Matrix_Multiplication/build> ./job-blas
 Description:	Reference dgemv.
 
 Working on problem size N=1024 
